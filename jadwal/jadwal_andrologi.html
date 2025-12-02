@@ -1,79 +1,95 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jadwal Dokter Poli Andrologi - Rumah Sakit DKT</title>
-  <link rel="icon" href="images/logo.png" type="image/png" />
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 flex flex-col min-h-screen">
-
-  <!-- Header -->
-  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <div class="flex items-center gap-3">
-          <img src="images/logo.png" alt="Logo Rumah Sakit" class="h-10 w-10 rounded-2xl" />
-          <div>
-            <div class="font-extrabold leading-tight">RS DKT Gubeng Pojok</div>
-            <div class="text-xs text-gray-600">Kec. Genteng, Surabaya</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jadwal Dokter Poli Andrologi - Rumah Sakit DKT</title>
+    <link rel="icon" href="/images/logo.png" type="image/png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header
+      class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-100"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-3">
+            <img
+              src="/images/logo.png"
+              alt="Logo Rumah Sakit"
+              class="h-10 w-10 rounded-2xl"
+            />
+            <div>
+              <div class="font-extrabold leading-tight">
+                RS DKT Gubeng Pojok
+              </div>
+              <div class="text-xs text-gray-600">Kec. Genteng, Surabaya</div>
+            </div>
           </div>
+
+          <nav class="hidden md:flex items-center gap-2">
+            <a
+              href="index.html"
+              class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100"
+              >Beranda</a
+            >
+            <a
+              href="layanan.html"
+              class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100"
+              >Kembali</a
+            >
+          </nav>
         </div>
-        
-        <nav class="hidden md:flex items-center gap-2">
-          <a href="index.html" class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100">Beranda</a>
-          <a href="layanan.html" class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100">Kembali</a>
-        </nav>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Hero -->
-  <section class="bg-emerald-600 text-white py-12">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-3xl font-bold mb-3">Jadwal Dokter Poli Andrologi</h1>
-    </div>
-  </section>
-
-  <!-- MAIN CONTENT -->
-  <main class="flex-grow">
-    <section class="max-w-7xl mx-auto px-4 py-12">
-      <div class="overflow-x-auto bg-white rounded-xl shadow-lg">
-        <table class="w-full border border-gray-200">
-          <thead class="bg-emerald-600 text-white">
-            <tr>
-              <th class="p-3 text-left">Hari</th>
-              <th class="p-3 text-left">Nama Dokter</th>
-              <th class="p-3 text-left">Jam Praktek</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-200 text-sm">
-
-            <!-- Senin -->
-            <tr>
-              <td class="p-3 font-semibold">Senin</td>
-              <td class="p-3">dr. Cecilia, Sp.And</td>
-              <td class="p-3">08.00 - Selesai</td>
-            </tr>
-
-            <!-- Kamis -->
-            <tr>
-              <td class="p-3 font-semibold">Kamis</td>
-              <td class="p-3">dr. Cecilia, Sp.And</td>
-              <td class="p-3">08.00 - Selesai</td>
-            </tr>
-
-          </tbody>
-        </table>
+    <!-- Hero -->
+    <section class="bg-emerald-600 text-white py-12">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-3xl font-bold mb-3">Jadwal Dokter Poli Andrologi</h1>
       </div>
-
-      <p class="text-xs text-gray-500 mt-4">* Jadwal bisa berubah sewaktu-waktu</p>
     </section>
-  </main>
 
-  <!-- Footer -->
-  <footer class="py-6 border-t bg-gray-900 text-center text-sm text-gray-200">© 2025 RS DKT Gubeng Pojok</footer>
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow">
+      <section class="max-w-7xl mx-auto px-4 py-12">
+        <div class="overflow-x-auto bg-white rounded-xl shadow-lg">
+          <table class="w-full border border-gray-200">
+            <thead class="bg-emerald-600 text-white">
+              <tr>
+                <th class="p-3 text-left">Hari</th>
+                <th class="p-3 text-left">Nama Dokter</th>
+                <th class="p-3 text-left">Jam Praktek</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 text-sm">
+              <!-- Senin -->
+              <tr>
+                <td class="p-3 font-semibold">Senin</td>
+                <td class="p-3">dr. Cecilia, Sp.And</td>
+                <td class="p-3">08.00 - Selesai</td>
+              </tr>
 
-</body>
+              <!-- Kamis -->
+              <tr>
+                <td class="p-3 font-semibold">Kamis</td>
+                <td class="p-3">dr. Cecilia, Sp.And</td>
+                <td class="p-3">08.00 - Selesai</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-xs text-gray-500 mt-4">
+          * Jadwal bisa berubah sewaktu-waktu
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-6 border-t bg-gray-900 text-center text-sm text-gray-200">
+      © 2025 RS DKT Gubeng Pojok
+    </footer>
+  </body>
 </html>
