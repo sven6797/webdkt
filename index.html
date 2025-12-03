@@ -48,9 +48,9 @@
               >Jadwal Dokter</a
             >
             <a
-              href="pendaftaran.html"
+              href="/profile-dokter/profil_dokter.html"
               class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100"
-              >Pendaftaran</a
+              >Profile Dokter</a
             >
             <a
               href="ulasan.html"
@@ -93,9 +93,9 @@
             >Jadwal Dokter</a
           >
           <a
-            href="pendaftaran.html"
+            href="/profile-dokter/profil_dokter.html"
             class="block px-3 py-2 rounded-lg hover:bg-gray-100"
-            >Pendaftaran</a
+            >Profile Dokter</a
           >
           <a
             href="ulasan.html"
@@ -124,9 +124,9 @@
             </p>
             <div class="mt-6 flex gap-3">
               <a
-                href="layanan.html"
+                href="pendaftaran.html"
                 class="rounded-2xl bg-emerald-600 text-white px-5 py-3 font-semibold shadow hover:bg-emerald-700"
-                >Daftar Layanan Poli</a
+                >Pendaftaran Online</a
               >
             </div>
           </div>
@@ -171,7 +171,7 @@
           <!-- UGD & PONEK 24 Jam -->
           <a href="/unggulan/rawat-umum.html">
             <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg transition"
+              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
             >
               <div class="text-4xl mb-3">⏱️</div>
               <h3 class="font-semibold text-lg">UGD & PONEK 24 Jam</h3>
@@ -185,7 +185,7 @@
           <!-- Rawat Inap -->
           <a href="/unggulan/">
             <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg transition"
+              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
             >
               <div class="text-4xl mb-3">🛏️</div>
               <h3 class="font-semibold text-lg">Fasilitas Rawat Inap</h3>
@@ -197,9 +197,9 @@
           </a>
 
           <!-- Poliklinik -->
-          <a href="/unggulan/">
+          <a href="/unggulan/poliklinik.html">
             <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg transition"
+              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
             >
               <div class="text-4xl mb-3">🩺</div>
               <h3 class="font-semibold text-lg">Pelayanan Poliklinik</h3>
@@ -213,7 +213,7 @@
           <!-- Farmasi -->
           <a href="/unggulan/">
             <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg transition"
+              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
             >
               <div class="text-4xl mb-3">💊</div>
               <h3 class="font-semibold text-lg">Farmasi</h3>
@@ -227,7 +227,7 @@
           <!-- Laboratorium -->
           <a href="unggulan/">
             <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg transition"
+              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
             >
               <div class="text-4xl mb-3">🧪</div>
               <h3 class="font-semibold text-lg">Laboratorium</h3>
@@ -241,7 +241,7 @@
           <!-- Radiologi -->
           <a href="unggulan/">
             <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg transition"
+              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
             >
               <div class="text-4xl mb-3">⚕️</div>
               <h3 class="font-semibold text-lg">Radiologi</h3>
@@ -255,7 +255,7 @@
           <!-- ICU & NICU -->
           <a href="unggulan/">
             <div
-              class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition"
+              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
             >
               <div class="text-4xl mb-4">👶</div>
               <h3 class="font-semibold text-lg">ICU & NICU</h3>
@@ -268,7 +268,7 @@
           <!-- Medical Checkup -->
           <a href="unggulan/">
             <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100"
+              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
             >
               <div class="text-3xl mb-3">👨‍⚕️</div>
               <h3 class="font-semibold text-lg">Medical Checkup</h3>
@@ -299,9 +299,10 @@
             class="rounded-2xl overflow-hidden shadow hover:shadow-lg transition"
           >
             <img
-              src="images/pamflet1.jpg"
+              src="/pamflet/pamflet1.jpg"
               alt="Pamflet 1"
-              class="w-full h-80 object-cover"
+              class="w-full h-80 object-cover bg-white cursor-pointer"
+              onclick="openImageModal(this.src)"
             />
           </div>
 
@@ -310,9 +311,10 @@
             class="rounded-2xl overflow-hidden shadow hover:shadow-lg transition"
           >
             <img
-              src="images/pamflet2.jpg"
-              alt="Pamflet 2"
-              class="w-full h-80 object-cover"
+              src="/pamflet/pamflet2.jpg"
+              alt="Pamflet 1"
+              class="w-full h-80 object-cover bg-white cursor-pointer"
+              onclick="openImageModal(this.src)"
             />
           </div>
 
@@ -321,9 +323,10 @@
             class="rounded-2xl overflow-hidden shadow hover:shadow-lg transition"
           >
             <img
-              src="images/pamflet3.jpg"
-              alt="Pamflet 3"
-              class="w-full h-80 object-cover"
+              src="/pamflet/pamflet3.jpg"
+              alt="Pamflet 1"
+              class="w-full h-80 object-cover bg-white cursor-pointer"
+              onclick="openImageModal(this.src)"
             />
           </div>
         </div>
@@ -343,6 +346,7 @@
         </p>
         <p>Telepon: (031) 5464215</p>
         <p>Email: rumkitbansurabaya@gmail.com</p>
+        <p>WhatsApp: +62 857-9722-7908</p>
         <div class="mt-4">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.7865023242916!2d112.74903837404104!3d-7.265120971380404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f97d377ea263%3A0xb52c01c7ef60a7f3!2sRumah%20Sakit%20DKT%20Gubeng!5e0!3m2!1sid!2sid!4v1756092614982!5m2!1sid!2sid"
@@ -360,6 +364,48 @@
     <footer class="py-6 border-t bg-gray-900 text-center text-sm text-gray-200">
       © 2025 RS DKT Gubeng Pojok
     </footer>
+
+    <!-- Modal Preview Gambar -->
+    <div
+      id="imageModal"
+      class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 hidden z-50"
+    >
+      <div class="relative">
+        <img
+          id="modalImage"
+          src=""
+          class="max-h-screen max-w-full rounded-xl shadow-2xl"
+        />
+
+        <!-- Tombol tutup -->
+        <button
+          onclick="closeImageModal()"
+          class="absolute top-2 right-2 bg-black/50 text-white px-3 py-1 rounded-full text-sm"
+        >
+          ✕
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function openImageModal(src) {
+        document.getElementById("modalImage").src = src;
+        document.getElementById("imageModal").classList.remove("hidden");
+      }
+
+      function closeImageModal() {
+        document.getElementById("imageModal").classList.add("hidden");
+      }
+
+      // Tutup modal jika klik area luar gambar
+      document
+        .getElementById("imageModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) closeImageModal();
+        });
+    </script>
+
+    <!-- Menu Button Hamburger -->
     <script>
       const btn = document.getElementById("menuBtn");
       const menu = document.getElementById("mobileMenu");
