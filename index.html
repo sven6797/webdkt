@@ -442,6 +442,21 @@
           bar2.style.opacity = "1";
           bar3.style.transform = "none";
         }
+        window.addEventListener("resize", () => {
+          if (window.innerWidth >= 768) {
+            // Tutup menu mobile
+            menu.classList.add("hidden");
+            menu.style.maxHeight = "0px";
+            menu.style.opacity = "0";
+
+            // Reset hamburger
+            bar1.style.transform = "none";
+            bar2.style.opacity = "1";
+            bar3.style.transform = "none";
+
+            open = false;
+          }
+        });
       });
     </script>
   </body>

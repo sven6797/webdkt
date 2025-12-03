@@ -51,6 +51,50 @@
               >Ulasan</a
             >
           </nav>
+
+          <!-- TOMBOL HAMBURGER MENU -->
+          <button
+            id="menuBtn"
+            class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition"
+          >
+            <div
+              id="bar1"
+              class="w-6 h-0.5 bg-gray-800 mb-1 transition-all"
+            ></div>
+            <div
+              id="bar2"
+              class="w-6 h-0.5 bg-gray-800 mb-1 transition-all"
+            ></div>
+            <div id="bar3" class="w-6 h-0.5 bg-gray-800 transition-all"></div>
+          </button>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div
+          id="mobileMenu"
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 origin-top overflow-hidden transition-all duration-300 ease-out"
+          style="max-height: 0; opacity: 0"
+        >
+          <a
+            href="/index.html"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            >Beranda</a
+          >
+          <a
+            href="/profile.html"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            >Profile</a
+          >
+          <a
+            href="/pendaftaran.html"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            >Pendaftaran</a
+          >
+          <a
+            href="/ulasan.html"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            >Ulasan</a
+          >
         </div>
       </div>
     </header>
@@ -148,5 +192,60 @@
     <footer class="py-6 border-t bg-gray-900 text-center text-sm text-gray-200">
       © 2025 RS DKT Gubeng Pojok
     </footer>
+
+    <!-- Menu Button Hamburger -->
+    <script>
+      const btn = document.getElementById("menuBtn");
+      const menu = document.getElementById("mobileMenu");
+
+      const bar1 = document.getElementById("bar1");
+      const bar2 = document.getElementById("bar2");
+      const bar3 = document.getElementById("bar3");
+
+      let open = false;
+
+      btn.addEventListener("click", () => {
+        open = !open;
+
+        // Animasi dropdown menu
+        if (open) {
+          menu.classList.remove("hidden");
+          setTimeout(() => {
+            menu.style.maxHeight = menu.scrollHeight + "px";
+            menu.style.opacity = "1";
+          }, 10);
+        } else {
+          menu.style.maxHeight = "0px";
+          menu.style.opacity = "0";
+          setTimeout(() => menu.classList.add("hidden"), 300);
+        }
+
+        // Animasi hamburger → X
+        if (open) {
+          bar1.style.transform = "translateY(7px) rotate(45deg)";
+          bar2.style.opacity = "0";
+          bar3.style.transform = "translateY(-7px) rotate(-45deg)";
+        } else {
+          bar1.style.transform = "none";
+          bar2.style.opacity = "1";
+          bar3.style.transform = "none";
+        }
+        window.addEventListener("resize", () => {
+          if (window.innerWidth >= 768) {
+            // Tutup menu mobile
+            menu.classList.add("hidden");
+            menu.style.maxHeight = "0px";
+            menu.style.opacity = "0";
+
+            // Reset hamburger
+            bar1.style.transform = "none";
+            bar2.style.opacity = "1";
+            bar3.style.transform = "none";
+
+            open = false;
+          }
+        });
+      });
+    </script>
   </body>
 </html>
