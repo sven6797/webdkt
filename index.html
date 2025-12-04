@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RS DKT Gubeng Pojok</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/tombol-next-prev/script.js" defer></script>
     <link
       rel="icon"
       href="/images/Logo dkt.png"
@@ -281,55 +282,38 @@
       </div>
     </section>
 
-    <!-- Berita -->
     <section
       id="berita"
       class="py-14 bg-gradient-to-b from-emerald-50/40 to-white"
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="bg-emerald-600 py-4">
           <h2 class="text-3xl font-extrabold text-center text-white">
             Berita Terbaru
           </h2>
         </div>
+
         <br />
-        <div class="grid md:grid-cols-3 gap-6">
-          <!-- Pamflet 1 -->
-          <div
-            class="rounded-2xl overflow-hidden shadow hover:shadow-lg transition"
-          >
-            <img
-              src="/pamflet/pamflet1.jpg"
-              alt="Pamflet 1"
-              class="w-full h-80 object-cover bg-white cursor-pointer"
-              onclick="openImageModal(this.src)"
-            />
-          </div>
 
-          <!-- Pamflet 2 -->
-          <div
-            class="rounded-2xl overflow-hidden shadow hover:shadow-lg transition"
-          >
-            <img
-              src="/pamflet/pamflet2.jpg"
-              alt="Pamflet 1"
-              class="w-full h-80 object-cover bg-white cursor-pointer"
-              onclick="openImageModal(this.src)"
-            />
-          </div>
+        <!-- Tombol Prev -->
+        <button
+          id="prevBtn"
+          class="absolute left-2 top-1/2 -translate-y-1/2 md:-left-4 bg-tranparent text-white text-3xl font-bold drop-shadow cursor-pointer p-0 z-20"
+        >
+          <br /><br />
+          <span class="inline-block rotate-180 text-emerald-800">➤</span>
+        </button>
 
-          <!-- Pamflet 3 -->
-          <div
-            class="rounded-2xl overflow-hidden shadow hover:shadow-lg transition"
-          >
-            <img
-              src="/pamflet/pamflet3.jpg"
-              alt="Pamflet 1"
-              class="w-full h-80 object-cover bg-white cursor-pointer"
-              onclick="openImageModal(this.src)"
-            />
-          </div>
-        </div>
+        <!-- Tombol Next -->
+        <button
+          id="nextBtn"
+          class="absolute right-2 top-1/2 -translate-y-1/2 md:-right-4 bg-tranparent text-white text-3xl font-bold drop-shadow cursor-pointer p-0 z-20"
+        >
+          <br /><br />
+          <span class="text-emerald-800">➤</span>
+        </button>
+
+        <div id="pamfletContainer" class="grid md:grid-cols-3 gap-6"></div>
       </div>
     </section>
 
