@@ -11,20 +11,30 @@ const pamflets = [
 let startIndex = 0;
 const perPage = 3;
 
-function renderPamflets() {
+function renderPamflets(direction = null) {
   const container = document.getElementById("pamfletContainer");
   container.innerHTML = "";
+
+  // Reset animasi dulu
+  container.classList.remove("slide-left", "slide-right");
 
   const slice = pamflets.slice(startIndex, startIndex + perPage);
 
   slice.forEach((src) => {
     container.innerHTML += `
       <div class="rounded-2xl overflow-hidden shadow hover:shadow-lg transition">
-        <img src="${src}" class="w-full h-80 object-cover bg-white cursor-pointer"
+        <img src="${src}" class="w-full h-80 object-cover bg-white cursor-pointer transition duration-300 hover:scale-105"
         onclick="openImageModal('${src}')">
       </div>
     `;
   });
+
+  // Beri animasi arah sesuai klik panah
+  if (direction === "next") {
+    container.classList.add("slide-left");
+  } else if (direction === "prev") {
+    container.classList.add("slide-right");
+  }
 
   updateButtons();
 }
@@ -56,7 +66,7 @@ function updateButtons() {
 document.getElementById("nextBtn").addEventListener("click", () => {
   if (startIndex + perPage < pamflets.length) {
     startIndex += perPage;
-    renderPamflets();
+    renderPamflets("next");
   }
 });
 
@@ -64,7 +74,7 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 document.getElementById("prevBtn").addEventListener("click", () => {
   if (startIndex - perPage >= 0) {
     startIndex -= perPage;
-    renderPamflets();
+    renderPamflets("prev");
   }
 });
 
