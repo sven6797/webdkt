@@ -33,14 +33,14 @@
           <nav class="hidden md:flex items-center gap-2">
             <!-- Beranda -->
             <a
-              href="index.html"
+              href="/index.html"
               class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100"
               >Beranda</a
             >
 
             <!-- Informasi Tarif -->
             <a
-              href="profile.html"
+              href="/profile.html"
               class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100"
               >Profile</a
             >
@@ -54,20 +54,21 @@
 
             <!-- Pendaftaran -->
             <a
-              href="pendaftaran.html"
+              href="/pendaftaran.html"
               class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100"
               >Pendaftaran</a
             >
 
             <!-- Ulasan -->
             <a
-              href="ulasan.html"
+              href="/ulasan.html"
               class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100"
               >Ulasan</a
             >
           </nav>
         </div>
       </div>
+      <div id="info-penting"></div>
     </header>
 
     <!-- Hero -->
@@ -164,5 +165,14 @@
     <footer class="py-6 border-t bg-gray-900 text-center text-sm text-gray-200">
       © 2025 RS DKT Gubeng Pojok
     </footer>
+
+    <!-- info penting -->
+    <script>
+      fetch("/components/info-penting.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("info-penting").innerHTML = html;
+        });
+    </script>
   </body>
 </html>

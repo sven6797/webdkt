@@ -106,6 +106,7 @@
           >
         </div>
       </div>
+      <div id="info-penting"></div>
     </header>
 
     <!-- Hero -->
@@ -114,6 +115,7 @@
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div class="grid md:grid-cols-2 gap-10 items-center">
+          <!-- Text -->
           <div>
             <h1
               class="text-4xl md:text-5xl font-extrabold leading-tight text-emerald-800"
@@ -122,22 +124,31 @@
             </h1>
             <p class="mt-4 text-gray-700 text-lg">
               Pelayanan ramah, dokter berpengalaman, fasilitas lengkap.
-              Pendaftaran online tanpa antre.
+              Pendaftaran online BPJS tanpa antre menggunakan Mobile JKN.
             </p>
             <div class="mt-6 flex gap-3">
               <a
                 href="pendaftaran.html"
                 class="rounded-2xl bg-emerald-600 text-white px-5 py-3 font-semibold shadow hover:bg-emerald-700"
-                >Pendaftaran Online</a
               >
+                Pendaftaran Online
+              </a>
             </div>
           </div>
-          <div>
-            <img
-              src="https://farm1.staticflickr.com/918/42911903004_e292235c87_o.jpg"
-              alt="Rumah Sakit"
-              class="rounded-3xl shadow-lg border border-emerald-100"
-            />
+
+          <!-- Image Slider -->
+          <div class="relative">
+            <!-- FIXED CONTAINER -->
+            <div
+              class="w-full h-[320px] md:h-[380px] overflow-hidden rounded-3xl shadow-lg border border-emerald-100"
+            >
+              <img
+                id="heroImage"
+                src="/images/background.jpeg"
+                alt="Rumah Sakit"
+                class="w-full h-full object-cover transition-opacity duration-700"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -443,6 +454,36 @@
           }
         });
       });
+    </script>
+
+    <!-- info penting -->
+    <script>
+      fetch("/components/info-penting.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("info-penting").innerHTML = html;
+        });
+    </script>
+
+    <!-- Image Slader -->
+    <script>
+      const images = [
+        "/images/background.jpeg",
+        "https://images.stockcake.com/public/4/7/b/47bb9b08-a632-4ac7-9ba7-271ef0345251_large/anime-medical-care-stockcake.jpg",
+      ];
+
+      let index = 0;
+      const heroImage = document.getElementById("heroImage");
+
+      setInterval(() => {
+        heroImage.style.opacity = "0";
+
+        setTimeout(() => {
+          index = (index + 1) % images.length;
+          heroImage.src = images[index];
+          heroImage.style.opacity = "1";
+        }, 400);
+      }, 4000);
     </script>
   </body>
 </html>

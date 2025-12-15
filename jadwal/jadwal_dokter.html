@@ -97,6 +97,7 @@
         </div>          
         </div>
       </div>
+      <div id="info-penting"></div>
     </header>
 
     <!-- Hero -->
@@ -324,6 +325,15 @@
           bar3.style.transform = "none";
         }
       });
+    </script>
+
+    <!-- info penting -->
+    <script>
+      fetch("/components/info-penting.html")
+        .then((res) => res.text())
+        .then((html) => {
+          document.getElementById("info-penting").innerHTML = html;
+        });
     </script>
   </body>
 </html>
