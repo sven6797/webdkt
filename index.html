@@ -4,20 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RS DKT Gubeng Pojok</title>
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/tombol-next-prev/script.js" defer></script>
-    <!-- Style Wave -->
-    <link rel="stylesheet" href="style.css" defer />
-    <link
-      rel="icon"
-      href="/images/Logo dkt.png"
-      type="image/png"
-      sizes="512x512"
-    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/images/Logo dkt.png" type="image/png" />
   </head>
 
   <body class="bg-gray-50">
-    <!-- HEADER -->
+    <!-- ================= NAVBAR ================= -->
     <header
       class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-100"
     >
@@ -27,8 +23,8 @@
           <div class="flex items-center gap-3">
             <img
               src="/images/favicon.png"
-              alt="Logo Rumah Sakit"
               class="h-10 w-10 rounded-2xl"
+              alt="Logo RS"
             />
             <div>
               <div class="font-extrabold leading-tight">
@@ -60,36 +56,30 @@
               class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100"
               >Ulasan</a
             >
+
+            <!-- Laporan RS -->
             <a
               href="/laporan/web_inm.pdf"
-              class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100 font-semibold""
-              >Laporan RS (PDF)</a
+              target="_blank"
+              class="px-3 py-2 rounded-xl text-sm bg-emerald-50 text-emerald-700 hover:bg-emerald-100 font-semibold"
             >
+              Laporan RS
+            </a>
           </nav>
 
-          <!-- TOMBOL HAMBURGER MENU -->
+          <!-- HAMBURGER -->
           <button
             id="menuBtn"
-            class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition"
+            class="md:hidden p-2 rounded-lg hover:bg-gray-100"
           >
-            <div
-              id="bar1"
-              class="w-6 h-0.5 bg-gray-800 mb-1 transition-all"
-            ></div>
-            <div
-              id="bar2"
-              class="w-6 h-0.5 bg-gray-800 mb-1 transition-all"
-            ></div>
-            <div id="bar3" class="w-6 h-0.5 bg-gray-800 transition-all"></div>
+            <div id="bar1" class="w-6 h-0.5 bg-gray-800 mb-1 transition"></div>
+            <div id="bar2" class="w-6 h-0.5 bg-gray-800 mb-1 transition"></div>
+            <div id="bar3" class="w-6 h-0.5 bg-gray-800 transition"></div>
           </button>
         </div>
 
-        <!-- MOBILE MENU -->
-        <div
-          id="mobileMenu"
-          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 origin-top overflow-hidden transition-all duration-300 ease-out"
-          style="max-height: 0; opacity: 0"
-        >
+        <!-- MENU MOBILE -->
+        <div id="mobileMenu" class="md:hidden hidden flex-col gap-1 pb-4">
           <a
             href="profile.html"
             class="block px-3 py-2 rounded-lg hover:bg-gray-100"
@@ -110,424 +100,39 @@
             class="block px-3 py-2 rounded-lg hover:bg-gray-100"
             >Ulasan</a
           >
+
+          <!-- Laporan RS -->
           <a
             href="/laporan/web_inm.pdf"
-            class="block px-3 py-2 rounded-lg hover:bg-gray-200"
-            >Laporan RS</a
+            target="_blank"
+            class="block px-3 py-2 rounded-lg bg-emerald-50 text-emerald-700 font-semibold hover:bg-emerald-100"
           >
+            Laporan RS
+          </a>
         </div>
       </div>
-      <div id="info-penting"></div>
     </header>
+    <!-- ================= END NAVBAR ================= -->
 
-    <!-- Hero -->
-    <section
-      class="relative bg-gradient-to-r from-emerald-200 via-white to-blue-500 overflow-hidden"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <div class="grid md:grid-cols-2 gap-10 items-center">
-          <!-- Text -->
-          <div>
-            <h1
-              class="text-4xl md:text-5xl font-extrabold leading-tight text-emerald-800"
-            >
-              Layanan Kesehatan Terpercaya di Gubeng Pojok, Surabaya
-            </h1>
-            <p class="mt-4 text-gray-700 text-lg">
-              Pelayanan ramah, dokter berpengalaman, fasilitas lengkap.
-              Pendaftaran online BPJS tanpa antre menggunakan Mobile JKN.
-            </p>
-            <div class="mt-6 flex gap-3">
-              <a
-                href="pendaftaran.html"
-                class="rounded-2xl bg-emerald-600 text-white px-5 py-3 font-semibold shadow hover:bg-emerald-700"
-              >
-                Pendaftaran Online
-              </a>
-            </div>
-          </div>
+    <!-- ================= ISI HALAMAN ================= -->
+    <main class="max-w-7xl mx-auto px-4 py-20 text-center">
+      <h1 class="text-4xl font-extrabold text-emerald-700 mb-4">
+        Selamat Datang di RS DKT Gubeng Pojok
+      </h1>
+      <p class="text-gray-600">
+        Website resmi Rumah Sakit DKT Gubeng Pojok Surabaya
+      </p>
+    </main>
 
-          <!-- Image -->
-          <div class="relative">
-            <div
-              class="w-full h-[320px] md:h-[380px] overflow-hidden rounded-3xl shadow-lg border border-emerald-100"
-            >
-              <img
-                id="heroImage"
-                src="/images/background.jpeg"
-                alt="Rumah Sakit"
-                class="w-full h-full object-cover transition-opacity duration-700"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <br /><br />
-      <!-- 🌊 WAVE -->
-      <svg
-        class="hero-waves absolute bottom-0 left-0 w-full"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 24 150 28"
-        preserveAspectRatio="none"
-      >
-        <defs>
-          <path
-            id="wave-path"
-            d="M-160 44c30 0 58-18 88-18s
-           58 18 88 18 58-18 88-18
-           58 18 88 18 v44h-352z"
-          />
-        </defs>
-
-        <g class="wave1">
-          <use
-            xlink:href="#wave-path"
-            x="50"
-            y="3"
-            fill="rgba(255,255,255,0.4)"
-          />
-        </g>
-        <g class="wave2">
-          <use
-            xlink:href="#wave-path"
-            x="50"
-            y="0"
-            fill="rgba(255,255,255,0.6)"
-          />
-        </g>
-        <g class="wave3">
-          <use xlink:href="#wave-path" x="50" y="9" fill="#ffffff" />
-        </g>
-      </svg>
-    </section>
-
-    <!-- Tutorial Pendaftaran Online -->
-    <section
-      id="tutorial"
-      class="py-16 bg-gradient-to-b from-white to-emerald-50"
-    >
-      <div class="max-w-4xl mx-auto px-4">
-        <!-- Judul -->
-        <div class="text-center mb-8">
-          <h2 class="text-3xl font-extrabold text-emerald-700">
-            Tutorial Pendaftaran Online
-          </h2>
-          <p class="text-gray-600 mt-2">
-            Ikuti langkah berikut untuk melakukan pendaftaran dengan mudah
-          </p>
-        </div>
-
-        <!-- Progress -->
-        <div class="mb-6">
-          <div class="flex justify-between text-sm text-gray-500 mb-2">
-            <span id="stepText">Langkah 1 dari 3</span>
-          </div>
-          <div class="w-full h-2 bg-gray-200 rounded-full">
-            <div
-              id="progressBar"
-              class="h-2 bg-emerald-600 rounded-full transition-all duration-500"
-              style="width: 33%"
-            ></div>
-          </div>
-        </div>
-
-        <!-- Card -->
-        <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
-          <!-- Gambar -->
-          <div
-            class="overflow-hidden hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
-          >
-            <img
-              id="tutorialImage"
-              src="/konten/antrol/step1.png"
-              class="w-full h-72 object-cover cursor-pointer transition-all duration-500 hover:scale-105"
-              onclick="openImageModal(src)"
-            />
-          </div>
-
-          <!-- Konten -->
-          <div class="p-6 text-center">
-            <h3 id="tutorialTitle" class="text-xl font-bold mb-2">
-              Buka Website RS
-            </h3>
-            <p id="tutorialDesc" class="text-gray-600">
-              Akses website resmi RS DKT Gubeng Pojok melalui browser.
-            </p>
-          </div>
-
-          <!-- Tombol -->
-          <div class="flex justify-between items-center p-4 border-t">
-            <button
-              id="tutorialPrev"
-              class="px-4 py-2 rounded-xl text-gray-500 hover:bg-gray-100 disabled:opacity-30"
-              disabled
-            >
-              ← Sebelumnya
-            </button>
-
-            <button
-              id="tutorialNext"
-              class="px-5 py-2 rounded-xl bg-emerald-600 text-white hover:bg-emerald-700"
-            >
-              Berikutnya →
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Layanan -->
-    <section
-      id="layanan"
-      class="py-14 bg-gradient-to-b from-white to-emerald-50/50"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-emerald-600 py-4">
-          <h2 class="text-3xl font-extrabold text-center text-white">
-            Layanan Unggulan
-          </h2>
-        </div>
-        <br />
-        <div class="grid md:grid-cols-3 gap-6">
-          <!-- Rawat Umum & BPJS -->
-          <a href="/unggulan/404.html" class="block">
-            <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
-            >
-              <div class="text-4xl mb-3">🏥</div>
-              <h3 class="font-semibold text-lg">Rawat Umum & BPJS</h3>
-              <p class="text-gray-600 mt-2 text-sm">
-                Pelayanan kesehatan umum dengan dukungan program BPJS untuk
-                seluruh masyarakat.
-              </p>
-            </div>
-          </a>
-
-          <!-- UGD & PONEK 24 Jam -->
-          <a href="/unggulan/404.html">
-            <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
-            >
-              <div class="text-4xl mb-3">⏱️</div>
-              <h3 class="font-semibold text-lg">UGD & PONEK 24 Jam</h3>
-              <p class="text-gray-600 mt-2 text-sm">
-                Unit Gawat Darurat dan Pelayanan Obstetri Neonatus Emergensi
-                Komprehensif siap 24 jam.
-              </p>
-            </div>
-          </a>
-
-          <!-- Rawat Inap -->
-          <a href="/unggulan/404.html">
-            <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
-            >
-              <div class="text-4xl mb-3">🛏️</div>
-              <h3 class="font-semibold text-lg">Fasilitas Rawat Inap</h3>
-              <p class="text-gray-600 mt-2 text-sm">
-                Kenyamanan perawatan mulai dari ruang VVIP, VIP, hingga kelas 3
-                sesuai kebutuhan pasien.
-              </p>
-            </div>
-          </a>
-
-          <!-- Poliklinik -->
-          <a href="/unggulan/poliklinik.html">
-            <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
-            >
-              <div class="text-4xl mb-3">🩺</div>
-              <h3 class="font-semibold text-lg">Pelayanan Poliklinik</h3>
-              <p class="text-gray-600 mt-2 text-sm">
-                Layanan konsultasi berbagai spesialis dengan dokter
-                berpengalaman.
-              </p>
-            </div>
-          </a>
-
-          <!-- Farmasi -->
-          <a href="/unggulan/404.html">
-            <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
-            >
-              <div class="text-4xl mb-3">💊</div>
-              <h3 class="font-semibold text-lg">Farmasi</h3>
-              <p class="text-gray-600 mt-2 text-sm">
-                Menyediakan obat-obatan sesuai resep dengan pelayanan ramah dan
-                profesional.
-              </p>
-            </div>
-          </a>
-
-          <!-- Laboratorium -->
-          <a href="unggulan/404.html">
-            <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
-            >
-              <div class="text-4xl mb-3">🧪</div>
-              <h3 class="font-semibold text-lg">Laboratorium</h3>
-              <p class="text-gray-600 mt-2 text-sm">
-                Pemeriksaan penunjang diagnosis: tes darah, urin, dan analisis
-                kesehatan lainnya.
-              </p>
-            </div>
-          </a>
-
-          <!-- Radiologi -->
-          <a href="unggulan/404.html">
-            <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
-            >
-              <div class="text-4xl mb-3">⚕️</div>
-              <h3 class="font-semibold text-lg">Radiologi</h3>
-              <p class="text-gray-600 mt-2 text-sm">
-                Layanan X-Ray, USG, dan pemeriksaan pencitraan medis lainnya
-                dengan teknologi modern.
-              </p>
-            </div>
-          </a>
-
-          <!-- ICU & NICU -->
-          <a href="unggulan/404.html">
-            <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
-            >
-              <div class="text-4xl mb-4">👶</div>
-              <h3 class="font-semibold text-lg">ICU & NICU</h3>
-              <p class="text-gray-500 text-sm">
-                Perawatan intensif bayi & dewasa
-              </p>
-            </div>
-          </a>
-
-          <!-- Medical Checkup -->
-          <a href="unggulan/404.html">
-            <div
-              class="p-6 rounded-2xl bg-white shadow-sm border border-gray-100 hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
-            >
-              <div class="text-3xl mb-3">👨‍⚕️</div>
-              <h3 class="font-semibold text-lg">Medical Checkup</h3>
-              <p class="text-gray-600 mt-2 text-sm">
-                Paket pemeriksaan kesehatan menyeluruh.
-              </p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section
-      id="berita"
-      class="py-14 bg-gradient-to-b from-emerald-50/40 to-white"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div class="bg-emerald-600 py-4">
-          <h2 class="text-3xl font-extrabold text-center text-white">
-            Berita Terbaru
-          </h2>
-        </div>
-
-        <br />
-
-        <!-- Tombol Prev -->
-        <button
-          id="prevBtn"
-          class="absolute left-2 top-1/2 -translate-y-1/2 md:-left-4 bg-tranparent text-white text-3xl font-bold drop-shadow cursor-pointer p-0 z-20"
-        >
-          <br /><br />
-          <span class="inline-block rotate-180 text-emerald-800">➤</span>
-        </button>
-
-        <!-- Tombol Next -->
-        <button
-          id="nextBtn"
-          class="absolute right-2 top-1/2 -translate-y-1/2 md:-right-4 bg-tranparent text-white text-3xl font-bold drop-shadow cursor-pointer p-0 z-20"
-        >
-          <br /><br />
-          <span class="text-emerald-800">➤</span>
-        </button>
-
-        <div id="pamfletContainer" class="grid md:grid-cols-3 gap-6"></div>
-      </div>
-    </section>
-
-    <!-- Kontak -->
-    <section
-      id="kontak"
-      class="py-14 bg-gradient-to-b from-emerald-50/60 to-white"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-extrabold mb-4">Kontak</h2>
-        <p>
-          Alamat: Jl. Gubeng Pojok No.21, Ketabang, Kec. Genteng, Surabaya, Jawa
-          Timur 60272
-        </p>
-        <p>Telepon: (031) 5464215</p>
-        <p>Email: rumkitbansurabaya@gmail.com</p>
-        <p>WhatsApp: +62 857-9722-7908</p>
-        <div class="mt-4">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.7865023242916!2d112.74903837404104!3d-7.265120971380404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f97d377ea263%3A0xb52c01c7ef60a7f3!2sRumah%20Sakit%20DKT%20Gubeng!5e0!3m2!1sid!2sid!4v1756092614982!5m2!1sid!2sid"
-            width="100%"
-            height="300"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-          ></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-6 border-t bg-gray-900 text-center text-sm text-gray-200">
+    <!-- ================= FOOTER ================= -->
+    <footer class="py-6 bg-gray-900 text-center text-sm text-gray-200">
       © 2025 RS DKT Gubeng Pojok
     </footer>
 
-    <!-- Modal Preview Gambar -->
-    <div
-      id="imageModal"
-      class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 hidden z-50"
-    >
-      <div class="relative">
-        <img
-          id="modalImage"
-          src=""
-          class="max-h-screen max-w-full rounded-xl shadow-2xl"
-        />
-
-        <!-- Tombol tutup -->
-        <button
-          onclick="closeImageModal()"
-          class="absolute top-2 right-2 bg-black/50 text-white px-3 py-1 rounded-full text-sm"
-        >
-          ✕
-        </button>
-      </div>
-    </div>
-
-    <script>
-      function openImageModal(src) {
-        document.getElementById("modalImage").src = src;
-        document.getElementById("imageModal").classList.remove("hidden");
-      }
-
-      function closeImageModal() {
-        document.getElementById("imageModal").classList.add("hidden");
-      }
-
-      // Tutup modal jika klik area luar gambar
-      document
-        .getElementById("imageModal")
-        .addEventListener("click", function (e) {
-          if (e.target === this) closeImageModal();
-        });
-    </script>
-
-    <!-- Menu Button Hamburger -->
+    <!-- ================= SCRIPT NAVBAR ================= -->
     <script>
       const btn = document.getElementById("menuBtn");
       const menu = document.getElementById("mobileMenu");
-
       const bar1 = document.getElementById("bar1");
       const bar2 = document.getElementById("bar2");
       const bar3 = document.getElementById("bar3");
@@ -537,20 +142,8 @@
       btn.addEventListener("click", () => {
         open = !open;
 
-        // Animasi dropdown menu
-        if (open) {
-          menu.classList.remove("hidden");
-          setTimeout(() => {
-            menu.style.maxHeight = menu.scrollHeight + "px";
-            menu.style.opacity = "1";
-          }, 10);
-        } else {
-          menu.style.maxHeight = "0px";
-          menu.style.opacity = "0";
-          setTimeout(() => menu.classList.add("hidden"), 300);
-        }
+        menu.classList.toggle("hidden");
 
-        // Animasi hamburger → X
         if (open) {
           bar1.style.transform = "translateY(7px) rotate(45deg)";
           bar2.style.opacity = "0";
@@ -560,119 +153,15 @@
           bar2.style.opacity = "1";
           bar3.style.transform = "none";
         }
-        window.addEventListener("resize", () => {
-          if (window.innerWidth >= 768) {
-            // Tutup menu mobile
-            menu.classList.add("hidden");
-            menu.style.maxHeight = "0px";
-            menu.style.opacity = "0";
-
-            // Reset hamburger
-            bar1.style.transform = "none";
-            bar2.style.opacity = "1";
-            bar3.style.transform = "none";
-
-            open = false;
-          }
-        });
-      });
-    </script>
-
-    <!-- info penting -->
-    <script>
-      fetch("/components/info-penting.html")
-        .then((res) => res.text())
-        .then((html) => {
-          document.getElementById("info-penting").innerHTML = html;
-        });
-    </script>
-
-    <!-- Image Slader -->
-    <script>
-      const images = [
-        "/images/background.jpeg",
-        "https://images.stockcake.com/public/4/7/b/47bb9b08-a632-4ac7-9ba7-271ef0345251_large/anime-medical-care-stockcake.jpg",
-      ];
-
-      let index = 0;
-      const heroImage = document.getElementById("heroImage");
-
-      setInterval(() => {
-        heroImage.style.opacity = "0";
-
-        setTimeout(() => {
-          index = (index + 1) % images.length;
-          heroImage.src = images[index];
-          heroImage.style.opacity = "1";
-        }, 400);
-      }, 4000);
-    </script>
-
-    <!-- Tutorial Online -->
-    <script>
-      const tutorialSteps = [
-        {
-          title: "Masuk Playstore",
-          desc: "Download Aplikasi Mobile JKN",
-          img: "/konten/antrol/step1.png",
-        },
-        {
-          title: "Pilih Menu Pendaftaran",
-          desc: "Klik menu Pendaftaran Online pada halaman utama.",
-          img: "/tutorial/step2.png",
-        },
-        {
-          title: "Scan QR / Isi Formulir",
-          desc: "Ikuti petunjuk pendaftaran sesuai layanan BPJS atau Umum.",
-          img: "/tutorial/step3.png",
-        },
-      ];
-
-      let currentStep = 0;
-
-      const img = document.getElementById("tutorialImage");
-      const title = document.getElementById("tutorialTitle");
-      const desc = document.getElementById("tutorialDesc");
-      const prev = document.getElementById("tutorialPrev");
-      const next = document.getElementById("tutorialNext");
-      const stepText = document.getElementById("stepText");
-      const progress = document.getElementById("progressBar");
-
-      function updateTutorial() {
-        img.classList.add("opacity-0", "scale-95");
-
-        setTimeout(() => {
-          img.src = tutorialSteps[currentStep].img;
-          title.textContent = tutorialSteps[currentStep].title;
-          desc.textContent = tutorialSteps[currentStep].desc;
-
-          stepText.textContent = `Langkah ${currentStep + 1} dari ${
-            tutorialSteps.length
-          }`;
-          progress.style.width =
-            ((currentStep + 1) / tutorialSteps.length) * 100 + "%";
-
-          prev.disabled = currentStep === 0;
-          next.textContent =
-            currentStep === tutorialSteps.length - 1
-              ? "Selesai ✓"
-              : "Berikutnya →";
-
-          img.classList.remove("opacity-0", "scale-95");
-        }, 300);
-      }
-
-      next.addEventListener("click", () => {
-        if (currentStep < tutorialSteps.length - 1) {
-          currentStep++;
-          updateTutorial();
-        }
       });
 
-      prev.addEventListener("click", () => {
-        if (currentStep > 0) {
-          currentStep--;
-          updateTutorial();
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+          menu.classList.add("hidden");
+          bar1.style.transform = "none";
+          bar2.style.opacity = "1";
+          bar3.style.transform = "none";
+          open = false;
         }
       });
     </script>
