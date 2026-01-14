@@ -1,0 +1,26 @@
+.hero-waves {
+  height: 140px;
+  width: 100%;
+}
+
+.wave1 use {
+  animation: waveMove 5s ease-in-out infinite;
+}
+.wave2 use {
+  animation: waveMove 7s ease-in-out infinite;
+}
+.wave3 use {
+  animation: waveMove 10s ease-in-out infinite;
+}
+
+@keyframes waveMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-90px, 6px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
