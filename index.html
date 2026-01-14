@@ -6,6 +6,7 @@
     <title>RS DKT Gubeng Pojok</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/tombol-next-prev/script.js" defer></script>
+    <!-- Style Wave -->
     <link rel="stylesheet" href="style.css" defer />
     <link
       rel="icon"
@@ -104,6 +105,12 @@
             class="block px-3 py-2 rounded-lg hover:bg-gray-100"
             >Ulasan</a
           >
+          <a
+            href="/laporan/web_inm.pdf"
+            target="_blank"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-200"
+            >Laporan RS (PDF)</a
+          >
         </div>
       </div>
       <div id="info-penting"></div>
@@ -111,7 +118,7 @@
 
     <!-- Hero -->
     <section
-      class="relative bg-gradient-to-r from-emerald-100 via-white to-emerald-50"
+      class="relative bg-gradient-to-r from-emerald-200 via-white to-blue-500 overflow-hidden"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div class="grid md:grid-cols-2 gap-10 items-center">
@@ -136,9 +143,8 @@
             </div>
           </div>
 
-          <!-- Image Slider -->
+          <!-- Image -->
           <div class="relative">
-            <!-- FIXED CONTAINER -->
             <div
               class="w-full h-[320px] md:h-[380px] overflow-hidden rounded-3xl shadow-lg border border-emerald-100"
             >
@@ -149,6 +155,118 @@
                 class="w-full h-full object-cover transition-opacity duration-700"
               />
             </div>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+      <!-- 🌊 WAVE -->
+      <svg
+        class="hero-waves absolute bottom-0 left-0 w-full"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 24 150 28"
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <path
+            id="wave-path"
+            d="M-160 44c30 0 58-18 88-18s
+           58 18 88 18 58-18 88-18
+           58 18 88 18 v44h-352z"
+          />
+        </defs>
+
+        <g class="wave1">
+          <use
+            xlink:href="#wave-path"
+            x="50"
+            y="3"
+            fill="rgba(255,255,255,0.4)"
+          />
+        </g>
+        <g class="wave2">
+          <use
+            xlink:href="#wave-path"
+            x="50"
+            y="0"
+            fill="rgba(255,255,255,0.6)"
+          />
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9" fill="#ffffff" />
+        </g>
+      </svg>
+    </section>
+
+    <!-- Tutorial Pendaftaran Online -->
+    <section
+      id="tutorial"
+      class="py-16 bg-gradient-to-b from-white to-emerald-50"
+    >
+      <div class="max-w-4xl mx-auto px-4">
+        <!-- Judul -->
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-extrabold text-emerald-700">
+            Tutorial Pendaftaran Online
+          </h2>
+          <p class="text-gray-600 mt-2">
+            Ikuti langkah berikut untuk melakukan pendaftaran dengan mudah
+          </p>
+        </div>
+
+        <!-- Progress -->
+        <div class="mb-6">
+          <div class="flex justify-between text-sm text-gray-500 mb-2">
+            <span id="stepText">Langkah 1 dari 3</span>
+          </div>
+          <div class="w-full h-2 bg-gray-200 rounded-full">
+            <div
+              id="progressBar"
+              class="h-2 bg-emerald-600 rounded-full transition-all duration-500"
+              style="width: 33%"
+            ></div>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+          <!-- Gambar -->
+          <div
+            class="overflow-hidden hover:shadow-lg hover:scale-[1.02] transition cursor-pointer"
+          >
+            <img
+              id="tutorialImage"
+              src="/konten/antrol/step1.png"
+              class="w-full h-72 object-cover cursor-pointer transition-all duration-500 hover:scale-105"
+              onclick="openImageModal(src)"
+            />
+          </div>
+
+          <!-- Konten -->
+          <div class="p-6 text-center">
+            <h3 id="tutorialTitle" class="text-xl font-bold mb-2">
+              Buka Website RS
+            </h3>
+            <p id="tutorialDesc" class="text-gray-600">
+              Akses website resmi RS DKT Gubeng Pojok melalui browser.
+            </p>
+          </div>
+
+          <!-- Tombol -->
+          <div class="flex justify-between items-center p-4 border-t">
+            <button
+              id="tutorialPrev"
+              class="px-4 py-2 rounded-xl text-gray-500 hover:bg-gray-100 disabled:opacity-30"
+              disabled
+            >
+              ← Sebelumnya
+            </button>
+
+            <button
+              id="tutorialNext"
+              class="px-5 py-2 rounded-xl bg-emerald-600 text-white hover:bg-emerald-700"
+            >
+              Berikutnya →
+            </button>
           </div>
         </div>
       </div>
@@ -484,6 +602,75 @@
           heroImage.style.opacity = "1";
         }, 400);
       }, 4000);
+    </script>
+
+    <!-- Tutorial Online -->
+    <script>
+      const tutorialSteps = [
+        {
+          title: "Masuk Playstore",
+          desc: "Download Aplikasi Mobile JKN",
+          img: "/konten/antrol/step1.png",
+        },
+        {
+          title: "Pilih Menu Pendaftaran",
+          desc: "Klik menu Pendaftaran Online pada halaman utama.",
+          img: "/tutorial/step2.png",
+        },
+        {
+          title: "Scan QR / Isi Formulir",
+          desc: "Ikuti petunjuk pendaftaran sesuai layanan BPJS atau Umum.",
+          img: "/tutorial/step3.png",
+        },
+      ];
+
+      let currentStep = 0;
+
+      const img = document.getElementById("tutorialImage");
+      const title = document.getElementById("tutorialTitle");
+      const desc = document.getElementById("tutorialDesc");
+      const prev = document.getElementById("tutorialPrev");
+      const next = document.getElementById("tutorialNext");
+      const stepText = document.getElementById("stepText");
+      const progress = document.getElementById("progressBar");
+
+      function updateTutorial() {
+        img.classList.add("opacity-0", "scale-95");
+
+        setTimeout(() => {
+          img.src = tutorialSteps[currentStep].img;
+          title.textContent = tutorialSteps[currentStep].title;
+          desc.textContent = tutorialSteps[currentStep].desc;
+
+          stepText.textContent = `Langkah ${currentStep + 1} dari ${
+            tutorialSteps.length
+          }`;
+          progress.style.width =
+            ((currentStep + 1) / tutorialSteps.length) * 100 + "%";
+
+          prev.disabled = currentStep === 0;
+          next.textContent =
+            currentStep === tutorialSteps.length - 1
+              ? "Selesai ✓"
+              : "Berikutnya →";
+
+          img.classList.remove("opacity-0", "scale-95");
+        }, 300);
+      }
+
+      next.addEventListener("click", () => {
+        if (currentStep < tutorialSteps.length - 1) {
+          currentStep++;
+          updateTutorial();
+        }
+      });
+
+      prev.addEventListener("click", () => {
+        if (currentStep > 0) {
+          currentStep--;
+          updateTutorial();
+        }
+      });
     </script>
   </body>
 </html>
