@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RS DKT Gubeng Pojok</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/tombol-next-prev/script.js" defer></script>
+    <!-- Style Wave -->
+    <link rel="stylesheet" href="style.css" defer />
+    <link
+      rel="icon"
+      href="/images/Logo dkt.png"
+      type="image/png"
+      sizes="512x512"
+    />
+  </head>
+
+  <body class="bg-gray-50">
+    <!-- HEADER -->
+    <header
+      class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-100"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- LOGO -->
+          <div class="flex items-center gap-3">
+            <img
+              src="/images/favicon.png"
+              alt="Logo Rumah Sakit"
+              class="h-10 w-10 rounded-2xl"
+            />
+            <div>
+              <div class="font-extrabold leading-tight">
+                RS DKT Gubeng Pojok
+              </div>
+              <div class="text-xs text-gray-600">Kec. Genteng, Surabaya</div>
+            </div>
+          </div>
+
+          <!-- MENU DESKTOP -->
+          <nav class="hidden md:flex items-center gap-2">
+            <a
+              href="index.html"
+              class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100"
+              >Beranda</a
+            >
+            <a
+              href="profile.html"
+              class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100"
+              >Profile</a
+            >
+            <a
+              href="/jadwal/jadwal_dokter.html"
+              class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100"
+              >Jadwal Dokter</a
+            >
+            <a
+              href="/profile-dokter/profil_dokter.html"
+              class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100"
+              >Profile Dokter</a
+            >
+            <a
+              href="ulasan.html"
+              class="px-3 py-2 rounded-xl text-sm hover:bg-gray-100"
+              >Ulasan</a
+            >
+          </nav>
+
+          <!-- TOMBOL HAMBURGER MENU -->
+          <button
+            id="menuBtn"
+            class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition"
+          >
+            <div
+              id="bar1"
+              class="w-6 h-0.5 bg-gray-800 mb-1 transition-all"
+            ></div>
+            <div
+              id="bar2"
+              class="w-6 h-0.5 bg-gray-800 mb-1 transition-all"
+            ></div>
+            <div id="bar3" class="w-6 h-0.5 bg-gray-800 transition-all"></div>
+          </button>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div
+          id="mobileMenu"
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 origin-top overflow-hidden transition-all duration-300 ease-out"
+          style="max-height: 0; opacity: 0"
+        >
+          <a
+            href="index.html"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            >Beranda</a
+          >
+          <a
+            href="profile.html"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            >Profile</a
+          >
+          <a
+            href="/jadwal/jadwal_dokter.html"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            >Jadwal Dokter</a
+          >
+          <a
+            href="/profile-dokter/profil_dokter.html"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            >Profile Dokter</a
+          >
+          <a
+            href="ulasan.html"
+            class="block px-3 py-2 rounded-lg hover:bg-gray-100"
+            >Ulasan</a
+          >
+        </div>
+      </div>
+      <div id="info-penting"></div>
+    </header>
+
+    <!-- ================= HEADER PAGE ================= -->
+    <section class="bg-gradient-to-r from-emerald-600 to-emerald-500 py-14">
+      <div class="max-w-7xl mx-auto px-4 text-center text-white">
+        <h1 class="text-4xl font-extrabold">Informasi Lainnya</h1>
+        <p class="mt-2 text-emerald-100">
+          Dokumen & informasi pendukung RS DKT Gubeng Pojok
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= CONTENT ================= -->
+    <section class="py-16">
+      <div class="max-w-5xl mx-auto px-4">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Mutu & Capaian RS -->
+          <a
+            href="/laporan/web_inm.pdf"
+            target="_blank"
+            class="group p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition"
+          >
+            <div class="text-4xl mb-3">📊</div>
+            <h3 class="font-bold text-lg group-hover:text-emerald-600">
+              Mutu & Capaian RS Tahun 2025
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">
+              Dokumen laporan mutu dan capaian kinerja rumah sakit.
+            </p>
+          </a>
+
+          <!-- Data PNS -->
+          <a
+            href="/dokumen/data-pns.pdf"
+            target="_blank"
+            class="group p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition"
+          >
+            <div class="text-4xl mb-3">👩‍⚕️</div>
+            <h3 class="font-bold text-lg group-hover:text-emerald-600">
+              Data PNS
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">
+              Informasi data pegawai PNS RS DKT Gubeng Pojok.
+            </p>
+          </a>
+
+          <!-- SOP Rumah Sakit -->
+          <a
+            href="/dokumen/sop-rs.pdf"
+            target="_blank"
+            class="group p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition"
+          >
+            <div class="text-4xl mb-3">📑</div>
+            <h3 class="font-bold text-lg group-hover:text-emerald-600">
+              SOP Rumah Sakit
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">
+              Standar Operasional Prosedur layanan rumah sakit.
+            </p>
+          </a>
+
+          <!-- Laporan Tahunan -->
+          <a
+            href="/dokumen/laporan-tahunan.pdf"
+            target="_blank"
+            class="group p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition"
+          >
+            <div class="text-4xl mb-3">📆</div>
+            <h3 class="font-bold text-lg group-hover:text-emerald-600">
+              Laporan Tahunan
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">
+              Ringkasan kegiatan dan laporan tahunan RS.
+            </p>
+          </a>
+
+          <!-- Informasi BPJS -->
+          <a
+            href="/dokumen/bpjs.pdf"
+            target="_blank"
+            class="group p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition"
+          >
+            <div class="text-4xl mb-3">🏥</div>
+            <h3 class="font-bold text-lg group-hover:text-emerald-600">
+              Informasi BPJS
+            </h3>
+            <p class="text-sm text-gray-600 mt-1">
+              Dokumen dan kebijakan terkait layanan BPJS.
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="py-6 bg-gray-900 text-center text-sm text-gray-200">
+      © 2025 RS DKT Gubeng Pojok
+    </footer>
+
+    <!-- ================= SCRIPT NAVBAR ================= -->
+    <script>
+      const btn = document.getElementById("menuBtn");
+      const menu = document.getElementById("mobileMenu");
+      const bar1 = document.getElementById("bar1");
+      const bar2 = document.getElementById("bar2");
+      const bar3 = document.getElementById("bar3");
+
+      let open = false;
+
+      btn.addEventListener("click", () => {
+        open = !open;
+        menu.classList.toggle("hidden");
+
+        if (open) {
+          bar1.style.transform = "translateY(7px) rotate(45deg)";
+          bar2.style.opacity = "0";
+          bar3.style.transform = "translateY(-7px) rotate(-45deg)";
+        } else {
+          bar1.style.transform = "none";
+          bar2.style.opacity = "1";
+          bar3.style.transform = "none";
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+          menu.classList.add("hidden");
+          bar1.style.transform = "none";
+          bar2.style.opacity = "1";
+          bar3.style.transform = "none";
+          open = false;
+        }
+      });
+    </script>
+  </body>
+</html>
