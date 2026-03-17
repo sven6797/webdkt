@@ -1,5 +1,6 @@
 // Daftar semua gambar pamflet
 const pamflets = [
+  "/pamflet/Libur.jpeg",
   "/pamflet/pamflet1.jpg",
   "/pamflet/pamflet2.jpg",
   "/pamflet/pamflet3.jpg",
